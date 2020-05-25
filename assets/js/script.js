@@ -5,7 +5,8 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
   const numberOfChar = prompt("How many characters would you like to have?");
   const alphaNum = "abcdefghijklmnopqrstuvwxyz1234567890";
-  const specialChar = confirm("Would you like special characters in your password?");
+  const specialCharQuestion = confirm("Would you like special characters in your password?");
+  const specialChar = "!@#$%^&*?~"
 };
 function writePassword() {
   // you can create a function named generatePassword that creates the password
