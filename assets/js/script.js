@@ -12,9 +12,10 @@ function generatePassword() {
   // Conditional for minimum of 8 characters 
   if (numberOfChar < 8 || numberOfChar > 128) {
     alert("Please make sure the length of your password is at least 8 characters and no more that 128 characters.");
+    return "Please use more than 8 characters, but less than 129 characters.";
   } else {
-  // Confirm with the user whether or not they want special characters.
-  var specialCharQuestion = confirm("Would you like special characters in your password?");
+    // Confirm with the user whether or not they want special characters.
+    var specialCharQuestion = confirm("Would you like special characters in your password?");
   }
 };
 function writePassword() {
