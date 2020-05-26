@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 var alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 var withSpecial = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?()_+=-~`{}[];";
 // Welcome the user to the password generator.
-var welcome = alert("Welcome to the password generator!");
+var welcome = alert("Welcome to the password generator! Please make sure your password is at least 8 characters and no more that 128 characters!");
 // Ask user for password length;
 var strength = prompt("How many characters would you like in your password?");
 // Check to see if it is too short or too long
