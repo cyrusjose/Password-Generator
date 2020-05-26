@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // Declare variables
-var alphanum = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+var alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 var withSpecial = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?()_+=-~`{}[];";
 // Ask user for password length;
 var strength = prompt("How many characters would you like in your password?");
@@ -13,17 +13,22 @@ if (strength < 8) {
   alert("Your password would be too long.");
   window.location.reload();
 } else {
-  var specialChar = confirm("Would you like special character in your password?")
-}
-// Write password to the #password input
-function generatePassword() {
-  var possiblePass = "";
-  if (specialChar === true) {
-    for (var i = 0; i <= strength; i++) {
-      possiblePass = possiblePass + withSpecial.charAt(Math.floor(Math.random() * Math.floor(withSpecial.length - 1)));
+  var specialChar = confirm("Would you like special character in your password?");
+  function generatePassword() {
+    var pwd = "";
+    if (specialChar === true) {
+      for (var i = 0; i < strength; i++) {
+        pwd += withSpecial.charAt(Math.floor(Math.random() * Math.floor(withSpecial.length - 1)));
+      }
+    } else {
+      for (var i = 0; i < strength; i++) {
+        pwd += alphaNum.charAt(Math.floor(Math.random() * Math.floor(alphaNum.length - 1)));
+      }
     }
+    return pwd;
   }
 }
+
 function writePassword() {
   // you can create a function named generatePassword that creates the password
   var password = generatePassword();
