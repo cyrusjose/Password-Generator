@@ -24,7 +24,7 @@ function generatePassword() {
     var specialChar = confirm(
       "Would you like special character in your password?"
     );
-    if (specialChar === true) {
+    if (specialChar) {
       for (var i = 0; i < strength; i++) {
         pwd += withSpecial.charAt(
           Math.floor(Math.random() * Math.floor(withSpecial.length - 1))
