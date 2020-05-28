@@ -5,10 +5,10 @@ var alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 var withSpecial =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?()_+=-~`{}[];";
 function generatePassword() {
-  // Ask user for password length;
   var warning = alert(
     "Please make sure you have at least 8 and no more than 128 characters."
   );
+  // Ask user for password length;
   var strength = prompt("How many characters would you like in your password?");
   // Check to see if it is too short or too long
   if (strength < 8 && strength > 0) {
