@@ -3,10 +3,9 @@ var generateBtn = document.querySelector("#generate");
 // Declare variables
 var alphaNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 var withSpecial = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?()_+=-~`{}[];";
-// Welcome the user to the password generator.
-var welcome = alert("Welcome to the password generator!");
-var warning = alert("Please make sure you have at least 8 and no more than 128 characters.");
+function generatePassword() {
 // Ask user for password length;
+var warning = alert("Please make sure you have at least 8 and no more than 128 characters.");
 var strength = prompt("How many characters would you like in your password?");
 // Check to see if it is too short or too long
 if (strength < 8) {
@@ -17,7 +16,6 @@ if (strength < 8) {
   window.location.reload();
 } else {
   var specialChar = confirm("Would you like special character in your password?");
-  function generatePassword() {
     var pwd = "";
     if (specialChar === true) {
       for (var i = 0; i < strength; i++) {
